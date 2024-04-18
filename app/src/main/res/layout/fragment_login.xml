@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/greenBg"
+    tools:context=".authenticationFragment.LoginFragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mailBlock"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Mail id"
+        android:textColorHint="@color/white"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <AutoCompleteTextView
+            android:id="@+id/mail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/mailBlock"
+            app:layout_constraintEnd_toEndOf="@+id/mailBlock"
+            app:layout_constraintStart_toStartOf="@+id/mailBlock"
+            app:layout_constraintTop_toTopOf="@+id/mailBlock" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pswdBlock"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter a Password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white"
+        android:textColorHint="@color/white"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/mailBlock">
+
+        <AutoCompleteTextView
+            android:id="@+id/pswd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pswdBlock"
+            app:layout_constraintEnd_toEndOf="@+id/pswdBlock"
+            app:layout_constraintStart_toStartOf="@+id/pswdBlock"
+            app:layout_constraintTop_toTopOf="@+id/pswdBlock" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create account"
+        android:textColor="@color/greenText"
+        android:textSize="15sp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="@+id/pswdBlock"
+        app:layout_constraintTop_toBottomOf="@+id/pswdBlock" />
+
+    <TextView
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangleblock"
+        android:backgroundTint="@color/greenText"
+        android:padding="5dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/pswdBlock"
+        app:layout_constraintStart_toStartOf="@+id/pswdBlock"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember Me"
+        android:textColor="@color/white"
+        android:buttonTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
+        app:layout_constraintStart_toStartOf="@+id/pswdBlock"
+        app:layout_constraintTop_toBottomOf="@+id/pswdBlock" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

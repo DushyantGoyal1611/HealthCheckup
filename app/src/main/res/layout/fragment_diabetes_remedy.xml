@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".diabetesCalculations.DiabetesRemedyFragment"
+    android:background="@color/bgcolor">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/statusDropdown"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:hint="Select ..."
+        app:boxCornerRadiusBottomEnd="10dp"
+        android:layout_marginTop="15dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <AutoCompleteTextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/statusDropdown"
+            app:layout_constraintEnd_toEndOf="@+id/statusDropdown"
+            app:layout_constraintStart_toStartOf="@+id/statusDropdown"
+            app:layout_constraintTop_toTopOf="@+id/statusDropdown"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="535dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="156dp"
+        android:layout_height="102dp"
+        android:src="@drawable/plant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remedy to Control Blood Sugar:-"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="403dp"
+        android:layout_height="613dp"
+        android:background="@drawable/reason_rectangle_nocolor"
+        android:backgroundTint="@color/blocks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusDropdown"
+        app:layout_constraintVertical_bias="0.685"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/lowRemedy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="Bitter Gourd (Karela): Bitter gourd is known for its hypoglycemic properties, which can help lower blood sugar levels. Drinking bitter gourd juice on an empty stomach in the morning is often recommended.\n\nCinnamon (Dalchini): Cinnamon contains bioactive compounds that may help improve insulin sensitivity and lower blood sugar levels. Sprinkling cinnamon powder on food or consuming cinnamon tea regularly may be beneficial.\n\nFenugreek (Methi): Fenugreek seeds are rich in soluble fiber, which can help lower blood sugar levels by slowing down carbohydrate absorption. Soaking fenugreek seeds overnight and consuming them in the morning is a common Ayurvedic remedy.\n\nIndian Gooseberry (Amla): Indian gooseberry is rich in vitamin C and antioxidants, which can help improve pancreatic function and regulate blood sugar levels. Consuming amla juice or incorporating fresh amla in your diet may be beneficial.\n\nHoly Basil (Tulsi): Holy basil has anti-diabetic properties and can help lower blood sugar levels. Chewing a few fresh basil leaves daily or drinking basil tea may help manage diabetes.\n\nAloe Vera: Aloe vera gel contains compounds that can help lower blood sugar levels and improve insulin sensitivity. Drinking aloe vera juice in moderation may help manage diabetes."
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+    <TextView
+        android:id="@+id/highRemedy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="Triphala: Triphala is a combination of three fruits – Amalaki, Bibhitaki, and Haritaki – known for their health benefits, including improving digestion and regulating blood sugar levels. Consuming Triphala powder or capsules may be beneficial.\n\nGudmar (Gymnema Sylvestre): Gudmar is known as the 'sugar destroyer' in Ayurveda due to its ability to lower blood sugar levels. Consuming gudmar powder or supplements may help manage high diabetes.\n\nTurmeric (Haldi): Turmeric contains curcumin, which has anti-inflammatory and antioxidant properties. It may help improve insulin sensitivity and lower blood sugar levels. Adding turmeric to your diet or consuming turmeric milk may be helpful.\n\nNeem: Neem is known for its anti-diabetic properties and can help improve insulin sensitivity. Consuming neem leaves or drinking neem tea regularly may be beneficial.\n\nAloe Vera: Aloe vera gel contains compounds that can help lower blood sugar levels and improve insulin sensitivity. Drinking aloe vera juice in moderation may help manage high diabetes.\n\nBitter Gourd (Karela): Bitter gourd is known for its hypoglycemic properties, which can help lower blood sugar levels. Consuming bitter gourd juice on an empty stomach in the morning or including bitter gourd in your diet may be beneficial."
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

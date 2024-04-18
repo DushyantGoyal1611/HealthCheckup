@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/BMlFragment"
+        android:name="com.example.healthcheckup.fragments.bmicalculations.BMlFragment"
+        android:label="fragment_b_ml"
+        tools:layout="@layout/fragment_b_ml" >
+        <action
+            android:id="@+id/action_BMlFragment_to_BMIResultFragment"
+            app:destination="@id/BMIResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BMIResultFragment"
+        android:name="com.example.healthcheckup.fragments.bmicalculations.BMIResultFragment"
+        android:label="fragment_b_m_i_result"
+        tools:layout="@layout/fragment_b_m_i_result" >
+        <argument
+            android:name="messageString"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.healthcheckup.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diabetesFragment"
+        android:name="com.example.healthcheckup.diabetesCalculations.DiabetesFragment"
+        android:label="fragment_diabetes"
+        tools:layout="@layout/fragment_diabetes" >
+        <action
+            android:id="@+id/action_diabetesFragment_to_diabetesRemedyFragment"
+            app:destination="@id/diabetesRemedyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diabetesRemedyFragment"
+        android:name="com.example.healthcheckup.diabetesCalculations.DiabetesRemedyFragment"
+        android:label="fragment_diabetes_remedy"
+        tools:layout="@layout/fragment_diabetes_remedy" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.healthcheckup.authenticationFragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.healthcheckup.authenticationFragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.healthcheckup.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_BMlFragment"
+            app:destination="@id/BMlFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_diabetesFragment"
+            app:destination="@id/diabetesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
